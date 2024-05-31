@@ -48,45 +48,43 @@
     <title>Mt Pleasant Cleaning Solutions</title>
     <style>
         .services-section {
-            display: flex;
-            align-items: flex-start;
             margin-bottom: 20px;
-            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-        }
-        .services-section img {
-            margin-left: 20px;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
         }
         .services-section-content {
-            flex: 1;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+        }
+        .services-section-content h3 {
+            width: 100%;
+        }
+        .services-section-content-wrapper {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+        }
+        .services-section-content-wrapper p {
+            flex: 1;
+            margin: 0;
+        }
+        .services-section-content-wrapper img {
+            margin-left: 20px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
         }
         .services-section-content p:first-of-type {
             margin-top: 0;
         }
-        .services-section-content-wrapper {
-            display: flex;
-            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-        }
-        .services-section-content-wrapper p {
-            margin: 0;
-        }
         /* Responsive adjustments */
         @media (max-width: 600px) {
-            .services-section {
+            .services-section-content-wrapper {
                 flex-direction: column;
             }
-            .services-section img {
+            .services-section-content-wrapper img {
                 margin-left: 0;
                 margin-top: 10px; /* Add some space between text and image on small screens */
                 width: 100%; /* Make images responsive */
                 height: auto; /* Maintain aspect ratio */
-            }
-            .services-section-content-wrapper {
-                flex-direction: column;
             }
         }
     </style>
