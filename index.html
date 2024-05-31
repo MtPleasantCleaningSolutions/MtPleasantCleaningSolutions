@@ -51,11 +51,12 @@
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
         }
         .services-section img {
             margin-left: 20px;
-            width: 275px; /* Adjusted to a smaller size */
-            height: 275px; /* Adjusted to a smaller size */
+            width: 150px;
+            height: 150px;
             object-fit: cover;
         }
         .services-section-content {
@@ -68,9 +69,25 @@
         }
         .services-section-content-wrapper {
             display: flex;
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
         }
         .services-section-content-wrapper p {
             margin: 0;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .services-section {
+                flex-direction: column;
+            }
+            .services-section img {
+                margin-left: 0;
+                margin-top: 10px; /* Add some space between text and image on small screens */
+                width: 100%; /* Make images responsive */
+                height: auto; /* Maintain aspect ratio */
+            }
+            .services-section-content-wrapper {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
